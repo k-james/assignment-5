@@ -3,7 +3,7 @@ window.addEventListener("load", init, false);
 function init() {
    var calcBtns = document.getElementById("calcBtns");
     var result = document.getElementById("result");
-    var newEquation = false;
+    //var newEquation = false;
     calcBtns.addEventListener("click", enter, false);
     function enter(evt) {  
         if (evt.target.value == "=") {

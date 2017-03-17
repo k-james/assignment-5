@@ -16,16 +16,58 @@
     //09, 10, 11: Attach onmouseover and onmouseout event handlers to target.image property
 
 //12, 13: Event handler to create 5 new Rollover objects once the page loads
+	
+	  
+    var image = document.getElementById("image");
+    image.getImage("id");
 
+    var oldImage = "image1";
+    var oldImage = "image2";
+    var oldImage = "image3";
+    var oldImage = "image4";
+    var oldImage = "image5";
+    
+
+    var newImageURL = "image1".src = "images/aboutus_over.png";
+    var newImageURL = "image2".src = "images/contactus_over.png";
+    var newImageURL = "image3".src = "images/home_over.png";
+    var newImageURL = "image4".src = "images/solutions_over.png";
+    var newImageURL = "image5".src = "images/support_over.png";
+	
+
+    
+//    function rollover("Oldimage", "newImageURL") {
+//        var target = document.getElementById("");
+//    }
+    
+    
+    
+    image.addEventListener("mouseover", function rollover(event) {
+        event.target.image = "oldImage";
+        setTimeout(function () {
+            event.target.image = "newImageURL";
+        }, 500);
+    }, false);
+    
+    
+    image.addEventListener("mouseout", function rollover(event) {
+        event.target.image = "newImageURL";
+        setTimeout(function () {
+            event.target.image = "oldImage";
+        }, 500);
+    }, false);
+    
+    
+    
 </script>
 </head>
 
-<body>
+<body onload = "rollover();"> <!-- event handler added to body -->
 	<!-- 01 -->
-    <img src="home.png">
-    <img src="aboutus.png">
-    <img src="solutions.png">
-    <img src="support.png">
-    <img src="contactus.png">
+    <img id="image1" src="home.png">
+    <img id="image2" src="aboutus.png">
+    <img id="image3" src="solutions.png">
+    <img id="image4" src="support.png">
+    <img id="image5" src="contactus.png">
 </body>
 </html>
