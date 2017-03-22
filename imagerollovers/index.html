@@ -42,7 +42,7 @@
     
     
     
-    image.addEventListener("mouseover", function rollover(event) {
+    image.addEventListener("mouseover", function (event) {
         event.target.image = "oldImage";
         setTimeout(function () {
             event.target.image = "newImageURL";
@@ -50,7 +50,7 @@
     }, false);
     
     
-    image.addEventListener("mouseout", function rollover(event) {
+    image.addEventListener("mouseout", function (event) {
         event.target.image = "newImageURL";
         setTimeout(function () {
             event.target.image = "oldImage";
@@ -62,7 +62,7 @@
 </script>
 </head>
 
-<body onload = "rollover();"> <!-- event handler added to body -->
+<body >
 	<!-- 01 -->
     <img id="image1" src="home.png">
     <img id="image2" src="aboutus.png">
